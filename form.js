@@ -10,14 +10,17 @@ document.addEventListener('click', e => {
     }
 });
 
-
-function capturar(){
-
-    function datos(nombre,email,password){
+class datos{
+    constructor(nombre,email,password){
         this.nombre=nombre;
         this.email=email;
         this.password=password;
     }
+}
+
+const baseDatosUser =[];
+
+function capturar(){
 
     let nombreUsuario = document.getElementById("nombre").value;
     let emailUsuario = document.getElementById("email").value;
@@ -28,26 +31,21 @@ function capturar(){
     agregar();
 }
 
-const baseDatosUser =[];
-
 function agregar(){
     baseDatosUser.push(nuevoUsuario);
     console.log(baseDatosUser);
 }
 
-
 function capturarReg(){
 
-    function datos(nombre,email,password){
-        this.nombre=nombre;
-        this.email=email;
-        this.password=password;
-    }
     let nombreUsuarioReg = document.getElementById("nombreReg").value;
     let emailUsuarioReg = document.getElementById("emailReg").value;
     let passwordReg = document.getElementById("passwordReg").value;
 
-    UsuarioReg  = new datos(nombreUsuarioReg,emailUsuarioReg,passwordReg);
-    console.log(UsuarioReg)
-}
+    if(baseDatosUser.find(usuario => usuario.nombre === nombreUsuarioReg)&&baseDatosUser.find(usuario => usuario.email === emailUsuarioReg)&&baseDatosUser.find(usuario => usuario.password === passwordReg)){
+        location.href="panelcontrol.html"
+    }else{
+        alert("Usuario No Registrado")}
+    }
+
 

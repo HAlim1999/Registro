@@ -16,6 +16,16 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.panel{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-image: url(fondoban.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .container-form{
     width: 90%;
@@ -54,14 +64,6 @@ button{
 button:hover{
     background-color:rgb(223, 74, 66);
 }
-
-
-
-
-
-
-
-
 
 .texto{
     color: white;
@@ -180,3 +182,7 @@ button:hover{
     visibility: hidden;
 }
 
+.container{
+    margin-top: 1rem;
+    width:1rem;
+}
