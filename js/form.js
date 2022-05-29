@@ -20,6 +20,17 @@ class datos{
 
 const baseDatosUser =[];
 
+const botonReg = document.getElementById("btnReg")
+botonReg.addEventListener("click",()=>{
+    capturar();
+})
+
+const botonReg2= document.getElementById("btnReg2")
+botonReg2.addEventListener("click",()=>{
+    capturarReg();
+})
+
+
 function capturar(){
 
     let nombreUsuario = document.getElementById("nombre").value;
