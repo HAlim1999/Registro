@@ -16,16 +16,6 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.panel{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background-image: url(../img/fondoban.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .container-form{
     width: 90%;
@@ -180,9 +170,4 @@ button:hover{
 .sign-up.active{
     opacity: 0;
     visibility: hidden;
-}
-
-.container{
-    margin-top: 1rem;
-    width:1rem;
 }

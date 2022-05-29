@@ -40,6 +40,7 @@ function capturar(){
     nuevoUsuario  = new datos(nombreUsuario,emailUsuario,password);
     console.log(nuevoUsuario)
     agregar();
+    alert("Usuario registrado")
 }
 
 function agregar(){
