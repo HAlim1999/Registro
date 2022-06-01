@@ -3,7 +3,7 @@
 *{
     margin:0;
     padding:0;
-    
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 body{
@@ -13,6 +13,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
     box-sizing: border-box;
+    width: 95%;
 }
 .imgCar{
     height:20rem;
@@ -33,3 +34,29 @@ body{
     width:1rem;
     border-radius: 100%;
 }
+.anchoimgN{
+    width:20rem;
+}
+.contenedorSal{
+    margin: auto;
+    width:70%;
+}
+
+#imgSal{
+    width: 100%;
+}
+.contenedorTabla{
+    align-content: center;
+    width: 100%;
+    align-content: center;
+}
+
+.tablaC{
+    margin: auto;
+    background-color: white;
+    width: 60%;
+    height: 250px;
+    border: 1px solid black;
+}
+
+
