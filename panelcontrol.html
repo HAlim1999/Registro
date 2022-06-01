@@ -12,7 +12,7 @@
     </head>
 
     <body class="min-vh-100 justify-content-end">
-      <nav class="navbar bg-light fixed-top">
+      <nav class="navbar bg-light fixed-top ">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Asociación Italiana de Suipacha</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -55,7 +55,7 @@
         </div>
       </nav>
 
-      <div id="carouselExampleDark" class="carousel carousel-dark slide margen" data-bs-ride="carousel">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide margen " data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -91,110 +91,73 @@
         </button>
       </div>
 
-
-      <table class="table tabla mx-3 mt-3">
-        <thead>
-          <tr>
-            <th scope="col">Debe</th>
-            <th scope="col">Haber</th>
-            <th scope="col">Saldo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>500</td>
-            <td>500</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>500</td>
-            <td>500</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>500</td>
-            <td>500</td>
-            <td>0</td>
-          </tr>
-        </tbody>
-      </table>
-
-
-
-      <div class="card text-center mx-3 mt-3">
-        <div class="card-header">
-          <ul class="nav nav-tabs card-header-tabs">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="true" href="#">Reserva de Salón</a>
-            </li>
+      <div class="contenedorSal">
+        <div class="card text-center mx-3 mt-3 ">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="true">Reserva de Salón</a>
+              </li>
+          </div>
+          <div class="card-body">
+            <img src="img/salon.jpg" class="card-img-top" id="imgSal" alt="...">
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a class="btn btn-primary" id="btnR">Reservar</a>
+          </div>
         </div>
-        <div class="card-body">
-          <img src="img/salon.jpg" class="card-img-top" alt="...">
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Reservar</a>
-        </div>
-      </div>
+    </div>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="card mx-3 mt-3">
+          <div class="card mx-3 mt-3 anchoimgN">
             <img src="img/estudio.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Italiano Nvl.1</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Inscribirse</a>
+                <a class="btn btn-primary" id="btn1">Inscribirse</a>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card mx-3 mt-3">
+          <div class="card mx-3 mt-3 anchoimgN">
             <img src="img/estudio.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Italiano Nvl. 2</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Inscribirse</a>
+                <a class="btn btn-primary" id="btn2">Inscribirse</a>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card mx-3 mt-3">
+          <div class="card mx-3 mt-3 anchoimgN">
             <img src="img/estudio.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Italiano Nvl. 3</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Inscribirse</a>
+                <a class="btn btn-primary" id="btn3">Inscribirse</a>
               </div>
             </div>
           </div>
         </div>
 
       </div>
+<div class="contenedorTabla mt-3 mb-3">
+  <div class="tablaC">
 
+  </div>
 
-      <!--<header>
-        <nav>
-          <h1>Asociación Italiana de Suipacha</h1>
-          <ul>
-            <li>Reserva Salón</li>
-            <li>Asesoría ciudadanía</li>
-            <li>Academia de idioma</li>
-            <li>Cuenta Corriente</li>
-            <li>Contacto</li>
-          </ul>
-        </nav>
-
-      </header>-->
-
-
+</div>
+    
 
       <script src="js/bootstrap.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/form.js"></script>
+      <!--<script src="js/form.js"></script>-->
+      <script src="js/compra.js"></script>
 
     </body>
     </html>
