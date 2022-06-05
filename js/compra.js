@@ -28,9 +28,5 @@ boton4.addEventListener("click",()=>{
     console.log(carrito);
 })
 
-const div = document.getElementById("tablaC")
-let parrafo = document.createElement("p");
-parrafo.innerHTML="Parrafo de prueba"
 
-document.body.appendChild(parrafo)
 
