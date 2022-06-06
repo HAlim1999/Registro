@@ -105,8 +105,17 @@ function botonEliminar (){
   btnE.parentNode.parentNode.remove();
   console.log(btnE.parentNode.parentNode.children[0].textContent)
 
-  console.log(Object.values(carrito)[0].Item)
+  for(i=0;i<4;i++){
+    let carritoE = Object.values(carrito);
 
+    if(carritoE[i].Item == btnE.parentNode.parentNode.children[i].textContent){
+      carritoE.splice(i,1)
+      console.log(carritoE)
+      carrito = {...carritoE}
+      pintarCarrito(carrito)
+
+    }
+  }
 
 
 }
