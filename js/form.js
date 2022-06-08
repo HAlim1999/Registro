@@ -33,19 +33,32 @@ botonReg2.addEventListener("click",()=>{
 
 function capturar(){
 
-    let nombreUsuario = document.getElementById("nombre").value;
-    let emailUsuario = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
+    let nombreUsuario = document.getElementById("nombre").value.trim();
+    let emailUsuario = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
 
-    nuevoUsuario  = new datos(nombreUsuario,emailUsuario,password);
-    console.log(nuevoUsuario)
-    agregar();
-    alert("Usuario registrado")
+    if(nombreUsuario==""&&emailUsuario==""&&password==""){
+        swal({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No has completados los datos o los mismos son incorrectos',
+          })
+    }else{
+        nuevoUsuario  = new datos(nombreUsuario,emailUsuario,password);
+        console.log(nuevoUsuario)
+        agregar();
+        swal({
+            title: "Usuario Registrado",
+            icon: "success",
+    
+        });
+    }
+
+    
 }
 
 function agregar(){
     baseDatosUser.push(nuevoUsuario);
-    console.log(baseDatosUser);
 }
 
 function capturarReg(){
