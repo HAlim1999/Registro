@@ -4,6 +4,10 @@ const items = document.getElementById("items");
 const tabla = document.getElementById("tbody")
 const pieTabla=document.getElementById("pieTabla")
 let carrito={};
+if(localStorage.getItem(`carrito`)){
+  carrito = JSON.parse(localStorage.getItem(`carrito`))
+}
+
 
 
 items.addEventListener("click", e =>{
@@ -55,7 +59,7 @@ const setCarrito = objeto =>{
 
 const pintarCarrito = ()=>{
   tabla.innerHTML="";
-  
+
 
   Object.values(carrito).forEach(producto =>{
     let tr = document.createElement("tr")
@@ -78,21 +82,27 @@ const pintarCarrito = ()=>{
       let tr3 = document.createElement("tr")
       tr3.innerHTML=`<tr><td></td><td></td><td></td><td><a class="btn btn-primary anadirCarrito">Finalizar Compra</a>
       </td></tr>`
-
       pieTabla.appendChild(tr2)
       pieTabla.appendChild(tr3)
+      localStorage.setItem(`carrito`, JSON.stringify(carrito))
     }
 
 
     const nPrecio=Object.values(carrito).reduce((acc,{Precio}) => Number(acc)+Number(Precio), 0)
-    pieTabla.querySelector(`span`).textContent=nPrecio;
+    if(Object.keys(carrito).length !== 0){
+      pieTabla.querySelector(`span`).textContent=nPrecio;
+    }else{
+      let consulta =Object.keys(carrito).length
 
-   
+      if(consulta ===0){
+        pieTabla.querySelector(`span`).textContent="";
+      }
+    }
 
     tabla.appendChild(tr)
   }
   )
-  
+
 }
 
 tabla.addEventListener("click", e=>{
@@ -101,23 +111,24 @@ tabla.addEventListener("click", e=>{
 
 
 function botonEliminar (){
+
   const btnE = document.getElementById("botonEliminar")
   btnE.parentNode.parentNode.remove();
-  console.log(btnE.parentNode.parentNode.children[0].textContent)
 
   for(i=0;i<4;i++){
     let carritoE = Object.values(carrito);
-
+    
     if(carritoE[i].Item == btnE.parentNode.parentNode.children[i].textContent){
       carritoE.splice(i,1)
       console.log(carritoE)
       carrito = {...carritoE}
       pintarCarrito(carrito)
-
+    }else if(localStorage.length = 1){
+      localStorage.setItem(JSON.stringify(`carrito`,""))
+      pintarCarrito(carrito)
     }
   }
-
-
+  
 }
 
 
