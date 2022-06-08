@@ -70,7 +70,11 @@ function capturarReg(){
     if(baseDatosUser.find(usuario => usuario.nombre === nombreUsuarioReg)&&baseDatosUser.find(usuario => usuario.email === emailUsuarioReg)&&baseDatosUser.find(usuario => usuario.password === passwordReg)){
         location.href="panelcontrol.html"
     }else{
-        alert("Usuario No Registrado")}
+        swal({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Usuario No Registrado',
+          })}
     }
 
 
