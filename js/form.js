@@ -50,11 +50,9 @@ function capturar(){
         swal({
             title: "Usuario Registrado",
             icon: "success",
-    
         });
     }
 
-    
 }
 
 function agregar(){
@@ -67,15 +65,10 @@ function capturarReg(){
     let emailUsuarioReg = document.getElementById("emailReg").value;
     let passwordReg = document.getElementById("passwordReg").value;
 
-    if(baseDatosUser.find(usuario => usuario.nombre === nombreUsuarioReg)&&baseDatosUser.find(usuario => usuario.email === emailUsuarioReg)&&baseDatosUser.find(usuario => usuario.password === passwordReg)){
-        location.href="panelcontrol.html"
-    }else{
+    (baseDatosUser.find(usuario => usuario.nombre === nombreUsuarioReg)&&baseDatosUser.find(usuario => usuario.email === emailUsuarioReg)&&baseDatosUser.find(usuario => usuario.password === passwordReg))? location.href="panelcontrol.html":
         swal({
             icon: 'error',
             title: 'Oops...',
             text: 'Usuario No Registrado',
-          })}
-    }
-
-
-
+          })
+}
